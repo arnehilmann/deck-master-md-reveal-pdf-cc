@@ -1,0 +1,34 @@
+@font-face {
+    font-family: EurostileLTStd;
+    src: url("fonts/EurostileLTStd.otf") format("opentype");
+}
+
+.reveal,
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6,
+.reveal div {
+  font-family: "EurostileLTStd", Impact, sans-serif;
+}
+
+.reveal h1 {
+  font-size: 3em; }
+
+.reveal .license {
+    font-size: 12pt;
+}
+
+.reveal section img {
+    border: 0;
+    background: transparent;
+}
+
+.reveal .footer {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    font-size: 0.5em;
+}
