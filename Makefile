@@ -15,19 +15,20 @@ all:	$(PROJECT_NAME).pdf
 		$< $@
 
 
-index.html:	slides.md reveal.js ditaa res/ img/ css/ Makefile
+index.html:	slides.md reveal.js res/ img/ css/ Makefile
 	pandoc \
-	    -t html5 \
-	    -f markdown-pandoc_title_block \
-	    --template=res/template-revealjs.html \
-	    --self-contained \
-	    --standalone \
-	    --section-divs \
-	    --variable theme=$(BASE_STYLE) \
-	    --variable transition=slide \
-	    --lua-filter res/render-ditaa.lua \
-	    -o $@ \
-	    $<
+		-t html5 \
+		-f markdown-pandoc_title_block \
+		--template=res/template-revealjs.html \
+		--standalone \
+		--section-divs \
+		--variable theme=$(BASE_STYLE) \
+		--variable transition=slide \
+		--lua-filter res/render-ditaa.lua \
+		-o $@ \
+		$<
+
+#--self-contained \
 
 
 reveal.js:
