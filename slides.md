@@ -23,7 +23,7 @@ Bob->Alice : hello
 
 # Second Slide {data-background=black data-background-image=img/background-violet-orig.jpg}
 
-## Subslide A
+## Subslide A &#x1f60E;
 
 ```ditaa
 +---+
@@ -31,12 +31,13 @@ Bob->Alice : hello
 +---+
 ```
 
-## Subslide B &#x1f60E;
+##
 
-lorem ipsum dolor
-lorem ipsum dolor
+<asciinema-player src="./img/test.json" poster="npt:0:21" idle-time-limit=2 speed=2></asciinema-player>
 
 
 # {data-background=black data-background-image=img/background-title-16x9.png}
 
 ## Thank You!
+
+<script src="asciinema/asciinema-player.js"></script>

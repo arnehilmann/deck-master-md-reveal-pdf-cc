@@ -3,6 +3,11 @@
     src: url("fonts/EurostileLTStd.otf") format("opentype");
 }
 
+@font-face {
+    font-family: Inconsolata;
+    src: url("fonts/Inconsolata-Regular.ttf") format("opentype");
+}
+
 .reveal,
 .reveal h1,
 .reveal h2,
@@ -31,4 +36,8 @@
     bottom: 1em;
     left: 1em;
     font-size: 0.5em;
+}
+
+.reveal div pre.asciinema-terminal {
+    font-family: "Inconsolata", monospace;
 }

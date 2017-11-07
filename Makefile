@@ -40,8 +40,16 @@ reveal.js:
 ditaa:
 	git clone https://github.com/stathissideris/ditaa.git
 
+
 plantuml.jar:
 	curl -L "https://sourceforge.net/projects/plantuml/files/plantuml.jar/download?use_mirror=10gbps-io" > plantuml.jar
+
+
+asciinema:
+	mkdir -p asciinema
+	curl -L -o asciinema/asciinema-player.css https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.css
+	curl -L -o asciinema/asciinema-player.js https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.js
+
 
 clean:
 	rm -rf index.html *.pdf
