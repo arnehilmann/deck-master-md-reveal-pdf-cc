@@ -25,7 +25,7 @@ make ditaa
 * https://github.com/christiangoltz/shaape
 * http://blockdiag.com/en/seqdiag/index.html
 * http://blockdiag.com/en/nwdiag/index.html
-* http://plantuml.com
+* http://plantuml.com http://plantuml.com/PlantUML_Language_Reference_Guide.pdf
 * https://mermaidjs.github.io
 * http://www.graphviz.org/content/dot-language
 * https://github.com/BurntSushi/erd

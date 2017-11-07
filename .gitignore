@@ -3,3 +3,4 @@ ditaa
 .DS_Store
 .*.swp
 rendered
+plantuml.jar

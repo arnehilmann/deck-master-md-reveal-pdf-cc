@@ -26,6 +26,7 @@ index.html:	slides.md reveal.js res/ img/ css/ Makefile
 		--variable theme=$(BASE_STYLE) \
 		--variable transition=slide \
 		--lua-filter res/render-ditaa.lua \
+		--lua-filter res/render-plantuml.lua \
 		-o $@ \
 		$<
 
@@ -39,6 +40,8 @@ reveal.js:
 ditaa:
 	git clone https://github.com/stathissideris/ditaa.git
 
+plantuml.jar:
+	curl -L "https://sourceforge.net/projects/plantuml/files/plantuml.jar/download?use_mirror=10gbps-io" > plantuml.jar
 
 clean:
 	rm -rf index.html *.pdf

@@ -14,16 +14,10 @@ with a catchy subtitle here&#8230;
 
 # First Slide {data-background-image=img/background-green-orig.jpg}
 
-```
-public class Point {
-    public final int x;
-    public final int y;
-
-    public Point(final int x, final int y) {
-        this.x = x;
-        this.y = y;
-    }
-}
+```plantuml
+@startuml
+Bob->Alice : hello
+@enduml
 ```
 
 
