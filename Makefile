@@ -16,6 +16,7 @@ all:	$(PROJECT_NAME).pdf
 
 
 index.html:	slides.md reveal.js res/ img/ css/ Makefile
+	mkdir -p rendered
 	pandoc \
 		-t html5 \
 		-f markdown-pandoc_title_block \
