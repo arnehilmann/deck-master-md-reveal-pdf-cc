@@ -18,19 +18,21 @@ all:	$(PROJECT_NAME).pdf
 index.html:	slides.md lib/reveal.js res/ img/ css/ Makefile
 	rm -rf rendered && mkdir -p rendered
 	pandoc \
+		-f markdown \
 		-t html5 \
-		-f markdown-pandoc_title_block \
 		--template=res/template-revealjs.html \
 		--standalone \
 		--section-divs \
 		--variable theme=$(BASE_STYLE) \
 		--variable transition=slide \
+		--variable title=$(PROJECT_NAME) \
 		--lua-filter res/render-ditaa.lua \
 		--lua-filter res/render-plantuml.lua \
 		-o $@ \
 		$<
 
-#--self-contained \
+# -f markdown-pandoc_title_block \
+# --self-contained \
 
 
 lib/reveal.js:
