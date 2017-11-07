@@ -15,22 +15,27 @@ all:	$(PROJECT_NAME).pdf
 		$< $@
 
 
-index.html:	slides.md reveal.js res/ img/ css/ Makefile
+index.html:	slides.md reveal.js ditaa res/ img/ css/ Makefile
 	pandoc \
 	    -t html5 \
 	    -f markdown-pandoc_title_block \
-	    -s \
 	    --template=res/template-revealjs.html \
+	    --self-contained \
 	    --standalone \
 	    --section-divs \
-	    --variable theme="$(BASE_STYLE)" \
-	    --variable transition="slide" \
+	    --variable theme=$(BASE_STYLE) \
+	    --variable transition=slide \
+	    --lua-filter res/render-ditaa.lua \
 	    -o $@ \
 	    $<
 
 
 reveal.js:
 	git clone https://github.com/hakimel/reveal.js.git
+
+
+ditaa:
+	git clone https://github.com/stathissideris/ditaa.git
 
 
 clean:

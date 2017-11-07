@@ -31,8 +31,11 @@ public class Point {
 
 ## Subslide A
 
-lorem ipsum dolor
-lorem ipsum dolor
+```ditaa
++---+
+|   |
++---+
+```
 
 ## Subslide B &#x1f60E;
 
