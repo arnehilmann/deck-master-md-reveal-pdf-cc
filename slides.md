@@ -1,3 +1,4 @@
+
 # Title {data-background=black data-background-image=img/background-title-16x9.png}
 
 with a catchy subtitle here&#8230;
@@ -26,9 +27,15 @@ Bob->Alice : hello
 ## Subslide A &#x1f60E;
 
 ```ditaa
-+---+
-|   |
-+---+
+    +--------+   +-------+    +-------+
+    |        | --+ ditaa +--> |       |
+    |  Text  |   +-------+    |diagram|
+    |Document|   |!magic!|    |       |
+    |     {d}|   |       |    |       |
+    +---+----+   +-------+    +-------+
+        :                         ^
+        |       Lots of work      |
+        +-------------------------+
 ```
 
 ##
@@ -36,7 +43,10 @@ Bob->Alice : hello
 <asciinema-player src="./img/test.json" poster="npt:0:21" idle-time-limit=2 speed=2></asciinema-player>
 
 
-# {data-background=black data-background-image=img/background-title-16x9.png}
+# Any Questions? {data-background=black data-background-image=img/paperclip.gif data-background-size=cover}
+
+
+# {data-background-color=black data-background-image=img/background-title-16x9.png}
 
 ## Thank You!
 
