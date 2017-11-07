@@ -3,7 +3,7 @@ function CodeBlock(elem)
         local filetype = "png"
         local mimetype = "image/png"
 
-        local img = pandoc.pipe("java", {"-jar", "ditaa/service/web/lib/ditaa0_10.jar", "-", "-"}, elem.text)
+        local img = pandoc.pipe("java", {"-jar", "lib/ditaa/service/web/lib/ditaa0_10.jar", "-", "-"}, elem.text)
         local fname = "rendered/ditaa-" .. pandoc.sha1(img) .. "." .. filetype
         file = io.open(fname, "w")
         file:write(img)

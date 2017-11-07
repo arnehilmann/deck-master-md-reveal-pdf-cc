@@ -40,4 +40,4 @@ Bob->Alice : hello
 
 ## Thank You!
 
-<script src="asciinema/asciinema-player.js"></script>
+<script src="lib/asciinema/asciinema-player.js"></script>

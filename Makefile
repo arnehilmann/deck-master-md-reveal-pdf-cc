@@ -6,7 +6,7 @@ BASE_STYLE=simple
 all:	$(PROJECT_NAME).pdf
 
 
-%.pdf:	index.html
+%.pdf:	index.html lib/reveal.js
 	docker run --rm -v `pwd`:/pwd -w /pwd \
 		--env http_proxy=${http_proxy} --env https_proxy=${https_proxy} \
 		$(DECKTAPE_CONTAINER) \
@@ -15,8 +15,8 @@ all:	$(PROJECT_NAME).pdf
 		$< $@
 
 
-index.html:	slides.md reveal.js res/ img/ css/ Makefile
-	mkdir -p rendered
+index.html:	slides.md lib/reveal.js res/ img/ css/ Makefile
+	rm -rf rendered && mkdir -p rendered
 	pandoc \
 		-t html5 \
 		-f markdown-pandoc_title_block \
@@ -33,22 +33,27 @@ index.html:	slides.md reveal.js res/ img/ css/ Makefile
 #--self-contained \
 
 
-reveal.js:
-	git clone https://github.com/hakimel/reveal.js.git
+lib/reveal.js:
+	mkdir -p lib
+	git clone https://github.com/hakimel/reveal.js.git $@
 
 
-ditaa:
-	git clone https://github.com/stathissideris/ditaa.git
+lib/ditaa:
+	mkdir -p lib
+	git clone https://github.com/stathissideris/ditaa.git $@
 
 
-plantuml.jar:
-	curl -L "https://sourceforge.net/projects/plantuml/files/plantuml.jar/download?use_mirror=10gbps-io" > plantuml.jar
+lib/plantuml.jar:
+	curl -L "https://sourceforge.net/projects/plantuml/files/plantuml.jar/download?use_mirror=10gbps-io" > $@
 
 
-asciinema:
-	mkdir -p asciinema
-	curl -L -o asciinema/asciinema-player.css https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.css
-	curl -L -o asciinema/asciinema-player.js https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.js
+lib/asciinema:
+	mkdir -p $@
+	curl -L -o $@/asciinema-player.css https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.css
+	curl -L -o $@/asciinema-player.js https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.js
+
+
+all-libs: lib/reveal.js lib/ditaa lib/plantuml.jar lib/asciinema
 
 
 clean:

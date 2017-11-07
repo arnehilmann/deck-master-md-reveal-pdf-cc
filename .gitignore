@@ -4,3 +4,5 @@ ditaa
 .*.swp
 rendered
 plantuml.jar
+lib
+tmp

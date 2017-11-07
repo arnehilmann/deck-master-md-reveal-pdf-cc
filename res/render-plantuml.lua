@@ -3,7 +3,7 @@ function CodeBlock(elem)
         local filetype = "png"
         local mimetype = "image/png"
 
-        local img = pandoc.pipe("java", {"-jar", "plantuml.jar", "-tpng", "-p", "-Sbackgroundcolor=transparent"}, elem.text)
+        local img = pandoc.pipe("java", {"-jar", "lib/plantuml.jar", "-tpng", "-p", "-Sbackgroundcolor=transparent"}, elem.text)
         local fname = "rendered/plantuml-" .. pandoc.sha1(img) .. "." .. filetype
         file = io.open(fname, "w")
         file:write(img)
