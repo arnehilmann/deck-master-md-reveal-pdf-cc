@@ -22,7 +22,7 @@ Bob->Alice : hello
 ```
 
 
-# Second Slide {data-background=black data-background-image=img/background-violet-orig.jpg}
+# Second Slide {data-background=black data-background-image=img/background-violet-orig.jpg data-background-size=cover}
 
 ## Subslide A &#x1f60E;
 
@@ -40,7 +40,15 @@ Bob->Alice : hello
 
 ##
 
-<asciinema-player src="./img/test.json" poster="npt:0:21" idle-time-limit=2 speed=2></asciinema-player>
+<asciinema-player
+    src="./img/test.json"
+    poster="npt:0:21"
+    idle-time-limit=2
+    speed=2
+    autoplay=true
+    rows=18
+    font-size="medium"
+></asciinema-player>
 
 
 # Any Questions? {data-background=black data-background-image=img/paperclip.gif data-background-size=cover}
