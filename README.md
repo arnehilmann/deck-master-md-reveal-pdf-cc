@@ -3,9 +3,20 @@
 ## tl;dr
 
 Make changes in ```slides.md```, then run
-```make```
-
+```
+make
+```
 to render both ```index.html``` and ```ccc-slides-master.pdf```.
+
+
+## ditaa diagrams
+
+If you want to use ditaa diagrams, you need a jdk1.8+ and the ditaa project.
+The later can be downloaded with
+
+```
+make ditaa
+```
 
 
 ## Possible formats for embedded ascii art
