@@ -37,7 +37,6 @@ open index.html
 * and a pdf, ready for handout
 ```
 
-```
 
 ## asciiart renderer
 
@@ -49,7 +48,17 @@ make download-all-libs
 ```
 
 
-## Possible formats for embedded ascii art
+## trouble shooting
+
+when ```make``` results in
+```
+Error running filter pandoc-utils/render-asciiart.lua:
+Error while running filter function: Error running java (error code 1):
+```,
+you should install the asciiart renderer (see previous subsection).
+
+
+## possible formats for embedded ascii art
 
 * http://www.umlet.com
 * https://github.com/christiangoltz/shaape
