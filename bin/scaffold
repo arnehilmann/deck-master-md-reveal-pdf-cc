@@ -1,0 +1,25 @@
+#!/bin/bash
+set -e -E -u -C -o pipefail
+
+trap 'EC=$?; echo AN ERROR OCCURED! EXIT CODE $EC; exit $EC;' ERR
+
+echo
+echo "scaffolding new cc slides"
+echo
+
+TARGET_DIR="${1:?no target dir specified?!}"
+TARGET_DIR="$(readlink -f "$TARGET_DIR")"
+SOURCE_DIR="$(dirname $0)/.."
+
+echo "---- creating target dir $TARGET_DIR"
+mkdir -p "$TARGET_DIR"
+
+echo "---- copying files (when missing in target dir)"
+cd "$SOURCE_DIR"
+cp -rn Makefile assets pandoc-utils slides.md "$TARGET_DIR"/ || :
+
+echo "---- done."
+
+echo "---- now execute the following commands..."
+echo "cd '$TARGET_DIR'; make download-all-libs; make"
+echo
