@@ -16,7 +16,7 @@ all:	$(PROJECT_NAME).pdf
 
 
 index.html:	slides.md lib/reveal.js res/ img/ css/ Makefile
-	rm -rf rendered && mkdir -p rendered
+	mkdir -p rendered
 	pandoc \
 		-f markdown \
 		-t html5 \
@@ -58,5 +58,12 @@ lib/asciinema:
 all-libs: lib/reveal.js lib/ditaa lib/plantuml.jar lib/asciinema
 
 
+start-chrome:
+	open -a 'Google Chrome' --args -allow-file-access-from-files file://$(PWD)/index.html
+
+
 clean:
-	rm -rf index.html *.pdf
+	rm -rf index.html *.pdf rendered
+
+
+.PHONY: all all-libs clean start-chrome
