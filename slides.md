@@ -1,19 +1,19 @@
 
-# Title {data-background=black data-background-image=img/background-title-16x9.png}
+# Title {data-background=black data-background-image=assets/img/background-title-16x9.png}
 
 with a catchy subtitle here&#8230;
 
 <small> Author | Date | etc </small>
 
-![](img/logo-and-name-dark.png){height=80px}
+![](assets/img/logo-and-name-dark.png){height=80px}
 
 
-# {data-background-image=img/background-orange-orig.jpg}
+# {data-background-image=assets/img/background-orange-orig.jpg}
 
-![](img/docker.png)
+![](assets/img/docker.png)
 
 
-# First Slide {data-background-image=img/background-green-orig.jpg}
+# First Slide {data-background-image=assets/img/background-green-orig.jpg}
 
 ```plantuml
 @startuml
@@ -22,7 +22,7 @@ Bob->Alice : hello
 ```
 
 
-# Second Slide {data-background=black data-background-image=img/background-violet-orig.jpg data-background-size=cover}
+# Second Slide {data-background=black data-background-image=assets/img/background-violet-orig.jpg data-background-size=cover}
 
 ## Subslide A
 
@@ -41,10 +41,10 @@ Bob->Alice : hello
 ## Subslide B &#x1f60E;
 
 
-# "Hands-on" {data-background=black data-background-image=img/background-title-16x9.png}
+# "Hands-on" {data-background=black data-background-image=assets/img/background-title-16x9.png}
 
 <asciinema-player
-    src="./img/test.json"
+    src="./assets/img/test.json"
     poster="npt:0:21"
     idle-time-limit=1
     speed=2
@@ -53,10 +53,10 @@ Bob->Alice : hello
 ></asciinema-player>
 
 
-# Any Questions? {data-background=black data-background-image=img/paperclip.gif data-background-size=cover}
+# Any Questions? {data-background=black data-background-image=assets/img/paperclip.gif data-background-size=cover}
 
 
-# Thank You! {data-background-color=black data-background-image=img/background-title-16x9.png}
+# Thank You! {data-background-color=black data-background-image=assets/img/background-title-16x9.png}
 
 
 
