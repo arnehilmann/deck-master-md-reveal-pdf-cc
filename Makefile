@@ -4,6 +4,12 @@ PDF_SIZE=1024x768
 BASE_STYLE=simple
 
 all:	$(PROJECT_NAME).pdf
+	@echo
+	@echo "FINISHED!"
+	@echo
+	@echo "open 'index.html'"
+	@echo "open '$<'"
+	@echo
 
 
 %.pdf:	index.html lib/reveal.js
@@ -15,7 +21,7 @@ all:	$(PROJECT_NAME).pdf
 		$< $@
 
 
-index.html:	slides.md lib/reveal.js res/ img/ css/ Makefile
+index.html:	slides.md lib/reveal.js res/ assets/ Makefile
 	mkdir -p rendered
 	pandoc \
 		-f markdown \
@@ -26,13 +32,9 @@ index.html:	slides.md lib/reveal.js res/ img/ css/ Makefile
 		--variable theme=$(BASE_STYLE) \
 		--variable transition=slide \
 		--variable title=$(PROJECT_NAME) \
-		--lua-filter res/render-ditaa.lua \
-		--lua-filter res/render-plantuml.lua \
+		--lua-filter res/render-asciiart.lua \
 		-o $@ \
 		$<
-
-# -f markdown-pandoc_title_block \
-# --self-contained \
 
 
 lib/reveal.js:
