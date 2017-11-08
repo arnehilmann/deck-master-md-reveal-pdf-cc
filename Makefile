@@ -66,4 +66,9 @@ clean:
 	rm -rf index.html *.pdf rendered
 
 
+mrproper:	clean
+	rm -rf lib
+	git clean -fxd
+
+
 .PHONY: all all-libs clean start-chrome
