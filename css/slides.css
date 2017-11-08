@@ -38,6 +38,26 @@
     font-size: 0.5em;
 }
 
+.reveal .controls .navigate-up.enabled {
+    border-bottom-color: #444;
+}
+
+.reveal .controls .navigate-down.enabled {
+    border-top-color: #444;
+}
+
+.reveal .controls .navigate-right.enabled {
+    border-left-color: #444;
+}
+
+.reveal .controls .navigate-left.enabled {
+    border-right-color: #444;
+}
+
+.reveal .progress span {
+    background: #444;
+}
+
 .reveal div pre.asciinema-terminal {
     font-family: "Inconsolata", monospace;
 }
