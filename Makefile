@@ -55,7 +55,7 @@ lib/asciinema:
 	curl -L -o $@/asciinema-player.js https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.js
 
 
-all-libs: lib/reveal.js lib/ditaa lib/plantuml.jar lib/asciinema
+download-all-libs: lib/reveal.js lib/ditaa lib/plantuml.jar lib/asciinema
 
 
 start-chrome:
@@ -71,4 +71,4 @@ mrproper:	clean
 	git clean -fxd
 
 
-.PHONY: all all-libs clean start-chrome
+.PHONY: all download-all-libs clean mrproper start-chrome
