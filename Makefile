@@ -21,18 +21,18 @@ all:	$(PROJECT_NAME).pdf
 		$< $@
 
 
-index.html:	slides.md lib/reveal.js res/ assets/ Makefile
+index.html:	slides.md lib/reveal.js pandoc-utils/ assets/ Makefile
 	mkdir -p rendered
 	pandoc \
 		-f markdown \
 		-t html5 \
-		--template=res/template-revealjs.html \
+		--template=pandoc-utils/template-revealjs.html \
 		--standalone \
 		--section-divs \
 		--variable theme=$(BASE_STYLE) \
 		--variable transition=slide \
 		--variable title=$(PROJECT_NAME) \
-		--lua-filter res/render-asciiart.lua \
+		--lua-filter pandoc-utils/render-asciiart.lua \
 		-o $@ \
 		$<
 
