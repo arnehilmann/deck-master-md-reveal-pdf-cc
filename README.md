@@ -1,21 +1,51 @@
 # cc-slides-master
 
+from markdown including asciiart and asciinema, over pandoc, to revealjs html and pdf
+
+
 ## tl;dr
 
-Make changes in ```slides.md```, then run
 ```
+bin/scaffold ../new-shiny-slides
+cd ../new-shiny-slides
+make download-all-libs
+# fumble slides.md
 make
+open index.html
 ```
-to render both ```index.html``` and ```ccc-slides-master.pdf```.
+
+## prerequisites
+
+* make
+* git
+* pandoc >= 2.0
+* docker
+* curl
+* bash
+* jdk >=1.8 (when using asciiart renderer)
+* asciinema (when using recorded terminal sessions)
 
 
-## ditaa diagrams
+## slides example
 
-If you want to use ditaa diagrams, you need a jdk1.8+ and the ditaa project.
+```slides.md``` contains some example slides; they...
+* have nice, cc-conform backgrounds (or animated gifs)
+* use the cc font
+* show embedded asciiart
+* embed terminal session
+* have cool transition effects
+* and a pdf, ready for handout
+```
+
+```
+
+## asciiart renderer
+
+If you want to use asciiart diagrams (for now, graphuml and ditaa are suppported),
+you need a jdk1.8+ and the corresponding libs.
 The later can be downloaded with
-
 ```
-make ditaa
+make download-all-libs
 ```
 
 
@@ -23,12 +53,9 @@ make ditaa
 
 * http://www.umlet.com
 * https://github.com/christiangoltz/shaape
-* http://blockdiag.com/en/seqdiag/index.html
-* http://blockdiag.com/en/nwdiag/index.html
 * http://plantuml.com http://plantuml.com/PlantUML_Language_Reference_Guide.pdf
 * https://mermaidjs.github.io
 * http://www.graphviz.org/content/dot-language
 * https://github.com/BurntSushi/erd
 * http://blockdiag.com/en/
-* http://blockdiag.com/en/actdiag/index.html
 * http://wavedrom.com
