@@ -1,17 +1,28 @@
-# cc-slides-master
+# deck-master-md-reveal-pdf-cc
 
-from markdown including asciiart and asciinema, over pandoc, to revealjs html and pdf
+from markdown (including asciiart and asciinema),
+over pandoc and custom rendering,
+to revealjs html and pdf
+
+example: [markdown](https://raw.githubusercontent.com/arnehilmann/deck-master-md-reveal-pdf-cc/master/slides.md)
 
 
 ## tl;dr
 
 ```
+# all prerequisites checked
+
 bin/scaffold ../new-shiny-slides
+
 cd ../new-shiny-slides
-# fumble slides.md
+
+# edit slides.md
+
 make
+
 open index.html
 ```
+
 
 ## prerequisites
 
@@ -33,7 +44,6 @@ this ```slides.md``` here contains some example slides; they...
 * embed terminal session
 * have cool transition effects
 * render a pdf, ready for handout
-```
 
 
 ## TODO
