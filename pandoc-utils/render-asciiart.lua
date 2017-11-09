@@ -1,7 +1,7 @@
 function CodeBlock(elem)
     local renderer = {
         ditaa = function(text)
-            return pandoc.pipe("java", {"-jar", "lib/ditaa/service/web/lib/ditaa0_10.jar", "-", "-"}, text)
+            return pandoc.pipe("java", {"-jar", "lib/ditaa.jar", "-", "-"}, text)
         end,
         plantuml = function(text)
             return pandoc.pipe("java", {"-jar", "lib/plantuml.jar", "-tpng", "-p", "-Sbackgroundcolor=transparent"}, text)

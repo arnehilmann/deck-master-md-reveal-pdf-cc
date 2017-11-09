@@ -21,7 +21,7 @@ all:	$(PROJECT_NAME).pdf
 		$< $@
 
 
-index.html:	slides.md lib/reveal.js pandoc-utils/ assets/ Makefile
+index.html:	slides.md lib/ pandoc-utils/ assets/ Makefile
 	mkdir -p rendered
 	pandoc \
 		-f markdown \
@@ -37,17 +37,21 @@ index.html:	slides.md lib/reveal.js pandoc-utils/ assets/ Makefile
 		$<
 
 
+lib: lib/reveal.js lib/ditaa.jar lib/plantuml.jar lib/asciinema
+
+
 lib/reveal.js:
 	mkdir -p lib
-	git clone https://github.com/hakimel/reveal.js.git $@
+	git clone --depth 1 https://github.com/hakimel/reveal.js.git $@
 
 
-lib/ditaa:
+lib/ditaa.jar:
 	mkdir -p lib
-	git clone https://github.com/stathissideris/ditaa.git $@
+	curl -L -o $@ https://github.com/stathissideris/ditaa/raw/master/service/web/lib/ditaa0_10.jar
 
 
 lib/plantuml.jar:
+	mkdir -p lib
 	curl -L "https://sourceforge.net/projects/plantuml/files/plantuml.jar/download?use_mirror=10gbps-io" > $@
 
 
@@ -55,9 +59,6 @@ lib/asciinema:
 	mkdir -p $@
 	curl -L -o $@/asciinema-player.css https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.css
 	curl -L -o $@/asciinema-player.js https://github.com/asciinema/asciinema-player/releases/download/v2.5.0/asciinema-player.js
-
-
-download-all-libs: lib/reveal.js lib/ditaa lib/plantuml.jar lib/asciinema
 
 
 start-chrome:
@@ -73,4 +74,4 @@ mrproper:	clean
 	git clean -fxd
 
 
-.PHONY: all download-all-libs clean mrproper start-chrome
+.PHONY: all clean mrproper start-chrome
