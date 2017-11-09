@@ -6,3 +6,5 @@ rendered
 plantuml.jar
 lib
 tmp
+index.html
+*.pdf
