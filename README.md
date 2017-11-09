@@ -46,7 +46,7 @@ open index.html
 
 ## ascii renderer
 
-at the moment, ```ditaa``` and ```graphuml``` asciiart is supported (see
+at the moment, ```ditaa```, ```graphuml``` and ```dot``` asciiart is supported (see
 [example slides.md](https://raw.githubusercontent.com/arnehilmann/deck-master-md-reveal-pdf-cc/master/slides.md)
 ).
 

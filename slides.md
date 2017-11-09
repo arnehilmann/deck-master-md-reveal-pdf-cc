@@ -40,6 +40,14 @@ Bob->Alice : hello
 
 ## Subslide B &#x1f60E;
 
+```dot
+digraph G {
+    a -> b -> c;
+    a -> c;
+    b -> d;
+}
+```
+
 
 # "Hands-on" {data-background=black data-background-image=assets/img/background-title-16x9.png}
 

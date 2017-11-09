@@ -6,6 +6,9 @@ function CodeBlock(elem)
         plantuml = function(text)
             return pandoc.pipe("java", {"-jar", "lib/plantuml.jar", "-tpng", "-p", "-Sbackgroundcolor=transparent"}, text)
         end,
+        dot = function(text)
+            return pandoc.pipe("dot", {"-Tpng"}, text)
+        end,
     }
     for format, render_fun in pairs(renderer) do
         if elem.classes[1] == format then
