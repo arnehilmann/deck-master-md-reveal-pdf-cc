@@ -5,7 +5,7 @@ over pandoc and custom rendering,
 to revealjs html and pdf
 
 example: [markdown](https://raw.githubusercontent.com/arnehilmann/deck-master-md-reveal-pdf-cc/master/slides.md)
--> [pdf](blob/master/deck-master-md-reveal-pdf-cc.pdf)
+-> [pdf](deck-master-md-reveal-pdf-cc.pdf)
 
 
 ## tl;dr
