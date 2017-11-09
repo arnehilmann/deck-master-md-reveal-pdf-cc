@@ -4,8 +4,10 @@ from markdown (including asciiart and asciinema),
 over pandoc and custom rendering,
 to revealjs html and pdf
 
-example: [markdown](https://raw.githubusercontent.com/arnehilmann/deck-master-md-reveal-pdf-cc/master/slides.md)
--> [pdf](example/deck-master-md-reveal-pdf-cc.pdf)
+example:
+[markdown](https://raw.githubusercontent.com/arnehilmann/deck-master-md-reveal-pdf-cc/master/slides.md)
+->
+[pdf](example/deck-master-md-reveal-pdf-cc.pdf)
 
 
 ## tl;dr
@@ -46,20 +48,23 @@ open index.html
 
 ## ascii renderer
 
-at the moment, ```ditaa```, ```graphuml``` and ```dot``` asciiart is supported (see
+at the moment,
+[ditaa](https://github.com/stathissideris/ditaa),
+[plantuml](http://plantuml.com/PlantUML_Language_Reference_Guide.pdf)
+and
+[dot](http://www.graphviz.org/content/dot-language)
+asciiart is supported (see
 [example slides.md](https://raw.githubusercontent.com/arnehilmann/deck-master-md-reveal-pdf-cc/master/slides.md)
 ).
 
 
 ## TODO
 
-### possible formats for embedded ascii art
+### possible future formats for embedded ascii art
 
 * http://www.umlet.com
 * https://github.com/christiangoltz/shaape
-* ~http://plantuml.com http://plantuml.com/PlantUML_Language_Reference_Guide.pdf~
 * https://mermaidjs.github.io
-* http://www.graphviz.org/content/dot-language
 * https://github.com/BurntSushi/erd
 * http://blockdiag.com/en/
 * http://wavedrom.com
