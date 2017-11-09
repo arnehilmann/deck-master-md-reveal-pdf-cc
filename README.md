@@ -5,6 +5,7 @@ over pandoc and custom rendering,
 to revealjs html and pdf
 
 example: [markdown](https://raw.githubusercontent.com/arnehilmann/deck-master-md-reveal-pdf-cc/master/slides.md)
+-> [pdf](blob/master/deck-master-md-reveal-pdf-cc.pdf)
 
 
 ## tl;dr
@@ -13,11 +14,8 @@ example: [markdown](https://raw.githubusercontent.com/arnehilmann/deck-master-md
 # all prerequisites checked
 
 bin/scaffold ../new-shiny-slides
-
 cd ../new-shiny-slides
-
 # edit slides.md
-
 make
 
 open index.html
@@ -35,15 +33,22 @@ open index.html
 * asciinema (when using recorded terminal sessions)
 
 
-## slides example
+## features
 
-this ```slides.md``` here contains some example slides; they...
-* have nice, cc-conform backgrounds (or animated gifs)
-* use the cc font
-* show embedded asciiart
+* write slides in markdown
+* embed asciiart directly
+* whole process automated
+* nice, cc-conform backgrounds (or animated gifs)
 * embed terminal session
-* have cool transition effects
-* render a pdf, ready for handout
+* cool transition effects (thanks to reveal.js)
+* render handout as pdf
+
+
+## ascii renderer
+
+at the moment, ```ditaa``` and ```graphuml``` asciiart is supported (see
+[example slides.md](https://raw.githubusercontent.com/arnehilmann/deck-master-md-reveal-pdf-cc/master/slides.md)
+).
 
 
 ## TODO
